@@ -1,0 +1,35 @@
+{
+  "name": "jaal-typing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx convex dev --once && concurrently -r npm:dev:web npm:dev:convex",
+    "dev:web": "vite",
+    "dev:convex": "npx convex dev",
+    "build": "npx convex codegen && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@convex-dev/react-query": "^0.1.0",
+    "@tanstack/react-query": "^5.90.20",
+    "@tanstack/react-router": "^1.158.1",
+    "convex": "^1.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@tanstack/router-plugin": "^1.160.0",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-tsconfig-paths": "^4.3.2"
+  }
+}
